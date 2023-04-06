@@ -1,6 +1,6 @@
-# Cosmic for Arch Linux
+# Pulsar for Arch Linux
 
-Cosmic is a collection of programs to make a full tiling desktop on Arch Linux.
+Pulsar is a collection of programs to make a full tiling desktop on Arch Linux.
 
 ## Motivations 
 
@@ -19,4 +19,4 @@ Cosmic is a collection of programs to make a full tiling desktop on Arch Linux.
 
 ## Attribution
 
-`cosmic` is licensed under the MIT license.
+`pulsar` is licensed under the MIT license.
