@@ -1,0 +1,10 @@
+@import "theme"
+configuration {
+	font: "Hack 14";
+	show-icons: true;
+	icon-theme: "Papirus";
+	terminal: "alacritty";
+	run,drun,window {
+		fallback-icon: "/home/tyler/.rep/dotfiles/config/rofi/icon.png";
+	}
+}

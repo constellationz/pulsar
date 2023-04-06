@@ -1,0 +1,9 @@
+#!/usr/bin/sh
+# Set user themes
+
+gsettings set org.gnome.desktop.interface icon-theme 'Gruvbox-Material-Dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Material-Dark'
+gsettings set org.gnome.desktop.interface font-name 'FreeSans 11'
+gsettings set org.gnome.desktop.interface document-font-name 'FreeSans 11'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Hack 11'
+gsettigns set org.gnome.desktop.interface cursor-theme 'Simp1e-Gruvbox-Dark'

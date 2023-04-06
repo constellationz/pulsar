@@ -1,0 +1,64 @@
+/*
+ * Waybar configuration
+*/
+
+* {
+  font-size: 14px;
+  font-family: 'Hack';
+  border-radius: 0px;
+  padding: 1px;
+  margin: 0 4px;
+}
+
+window#waybar {
+  background: #282828;
+  color: #ebdbb2;
+}
+
+#workspaces,
+#tray {
+  padding: 0px;
+}
+
+#workspaces button {
+  padding: 0px;
+  color: #ebdbb2;
+  border: 0px;
+  border-radius: 2px;
+  padding: 0;
+  margin: 0 1px;
+}
+
+#workspaces button.persistent {
+  color: #928374;
+}
+
+#workspaces button.focused {
+  color: #ebdbb2;
+  background: #504945;
+  border-bottom: 2px solid #83a598;
+}
+
+#workspaces button:hover {
+  background: #32302f;
+  border-top: none;
+}
+
+#window {
+  color: #ebdbb2;
+}
+
+#idle_inhibitor,
+#network,
+#clock,
+#pulseaudio {
+  color: #ebdbb2;
+}
+
+#cpu,
+#memory,
+#battery,
+#disk {
+  color: #83a598;
+}
+

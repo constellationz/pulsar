@@ -1,0 +1,40 @@
+#!/usr/bin/sh
+# Install AUR packages
+# NOTE: This script skips over packages that have
+# already been pulled and built
+
+# Install fakeroot for makepkg and Papirus as a fallback theme
+sudo pacman -S --noconfirm --needed git base-devel papirus-icon-theme
+
+# Install Gruvbox icon & GTK themes
+cd /tmp/
+git clone https://aur.archlinux.org/gruvbox-material-theme-git.git 
+cd gruvbox-material-theme-git
+makepkg -s --noconfirm
+sudo pacman -U gruvbox-material-icon-theme-* --noconfirm --needed
+sudo pacman -U gruvbox-material-gtk-theme-* --noconfirm --needed
+rm -rf /tmp/gruvbox-material-theme-git/
+
+# Install Gruvbox cursor theme
+cd /tmp/
+git clone https://aur.archlinux.org/xcursor-simp1e.git
+cd xcursor-simp1e
+makepkg -s --noconfirm
+sudo pacman -U xcursor-simp1e-gruvbox-* --noconfirm --needed
+rm -rf /tmp/xcursor-simp1e/
+
+# Install Rofi for Wayland
+cd /tmp/
+git clone https://aur.archlinux.org/rofi-lbonn-wayland-git.git 
+cd rofi-lbonn-wayland-git
+makepkg -s --noconfirm --nocheck
+sudo pacman -U rofi-lbonn-wayland-git-* --noconfirm --needed
+rm -rf /tmp/rofi-lbonn-wayland-git/
+
+# Install clipman
+cd /tmp/
+git clone https://aur.archlinux.org/clipman.git
+cd clipman
+makepkg -s --noconfirm --nocheck
+sudo pacman -U clipman-* --noconfirm --needed
+rm -rf /tmp/clipman/

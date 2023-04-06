@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+# Copy configs
+
+# Used to store certain states
+mkdir -p $HOME/.config
+
+# Copy configs to config directory
+SCRIPT_DIR=$(dirname $0)
+CONFIG_DIR=$SCRIPT_DIR/../config
+
+# $1 - From directory
+# $2 - To directory
+sync () {
+	# Sync new file
+	rsync -ar $1 $2
+	rename 'dot-' '.' $2*
+}
+
+for config in $(ls -A $CONFIG_DIR); do
+	echo "Syncing config/$config"
+	sync $CONFIG_DIR/$config $HOME/.config/
+done
