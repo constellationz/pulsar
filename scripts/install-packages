@@ -2,6 +2,7 @@
 # Install sway and desktop programs
 
 sudo pacman -S --noconfirm \
+	rsync \
 	polkit \
 	light \
 	alsa-utils \

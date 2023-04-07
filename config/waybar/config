@@ -4,7 +4,7 @@
     "height": 32,
     "modules-left": ["sway/workspaces", "sway/window", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["idle_inhibitor", "memory", "cpu", "network", "battery", "pulseaudio", "clock"],
+    "modules-right": ["idle_inhibitor", "memory", "cpu", "battery", "pulseaudio", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -13,8 +13,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "idling",
-            "deactivated": "inhibit idling"
+            "activated": "idle",
+            "deactivated": "noidle"
         }
     },
     "sway/mode": {
@@ -25,8 +25,11 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%A, %B %d at %I:%M %p}",
+        "format": "{:%A, %B %d %I:%M %p}",
         "format-alt": "{:%Y-%m-%d %H:%M}"
+    },
+    "battery": {
+        "format": "bat {capacity}%"
     },
     "cpu": {
         "format": "cpu {usage}%",

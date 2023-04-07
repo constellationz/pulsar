@@ -19,7 +19,7 @@ set $screenshot grim -g "$(slurp -b 00000055 -w 0)" - | wl-copy
 
 # Configure outputs
 output * bg $wallpaper fill
-output * scale 1
+output * scale 1.8
 
 # Fonts
 font pango:Hack 10
@@ -59,8 +59,9 @@ exec swayidle -w \
 # Trackpads
 input type:touchpad {
 	tap disabled
-	natural_scroll disabled
+	natural_scroll enabled
 	middle_emulation disabled
+    scroll_factor 0.15
 }
 
 # Pointers
