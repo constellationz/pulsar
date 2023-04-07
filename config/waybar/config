@@ -17,6 +17,9 @@
             "deactivated": "noidle"
         }
     },
+    "sway/window": {
+        "max-length": 30
+    },
     "sway/mode": {
         "format": "{}"
     },
