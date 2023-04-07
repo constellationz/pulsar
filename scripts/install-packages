@@ -11,8 +11,8 @@ sudo pacman -S --noconfirm \
 	xdg-desktop-portal-wlr \
 	libnotify \
 	swayidle \
-	swaylock \
 	swaybg \
+	waylock \
 	waybar \
 	wtype \
 	wl-clipboard \

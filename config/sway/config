@@ -14,7 +14,7 @@ set $wallpaper ~/.config/sway/wallpaper.svg
 set $term alacritty
 set $launcher rofi -show drun
 set $switcher rofi -show
-set $lock swaylock -i $wallpaper -e -u
+set $lock waylock
 set $screenshot grim -g "$(slurp -b 00000055 -w 0)" - | wl-copy
 
 # Configure outputs
@@ -86,13 +86,18 @@ bindsym $mod+Shift+q kill
 
 # Launcher
 bindsym $mod+d exec $launcher
+bindsym XF86Search exec $launcher
 
 # Screenshot
 bindsym Print exec $screenshot
 
 # Brightness
-bindsym XF86MonBrightnessUp exec light -A 10
-bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86MonBrightnessUp exec light -A 1
+bindsym XF86MonBrightnessDown exec light -U 1
+
+# Keyboard brightness
+bindsym $mod+XF86MonBrightnessUp exec light -s sysfs/leds/kbd_backlight -A 1
+bindsym $mod+XF86MonBrightnessDown exec light -s sysfs/leds/kbd_backlight -U 1 
 
 # Volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 2%+
@@ -102,6 +107,7 @@ bindsym XF86AudioMicMute exec --no-startup-id amixer sset Capture toggle
 
 # Switch windows
 bindsym $mod+Tab exec $switcher
+bindsym XF86LaunchA exec $switcher
 
 # Drag modifier
 floating_modifier $mod normal
