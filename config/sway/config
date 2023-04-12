@@ -1,7 +1,7 @@
 # Sway configuration
 
 # Disable XWayland
-xwayland disable
+# xwayland disable
 
 # Main Keys
 set $mod Mod4
@@ -14,6 +14,7 @@ set $right l
 set $term alacritty
 set $launcher rofi -show drun
 set $switcher rofi -show
+set $emoji rofimoji
 set $lock waylock
 set $screenshot grim -g "$(slurp -b 00000055 -w 0)" - | wl-copy
 
@@ -103,6 +104,7 @@ bindsym $mod+Shift+q kill
 # Launchers
 bindsym $mod+d exec $launcher
 bindsym XF86Search exec $launcher
+bindsym $mod+Period exec $emoji
 
 # Screenshot
 bindsym Print exec $screenshot
@@ -194,8 +196,9 @@ bindsym $mod+Shift+space floating toggle
 # Swap focus between the tiling area and the floating area
 bindsym $mod+space focus mode_toggle
 
-# Move focus to the parent container
+# Move focus to the parent and child containers
 bindsym $mod+a focus parent
+bindsym $mod+c focus child
 
 # Move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad

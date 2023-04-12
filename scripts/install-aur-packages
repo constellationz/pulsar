@@ -31,6 +31,14 @@ makepkg -s --noconfirm --nocheck
 sudo pacman -U rofi-lbonn-wayland-git-* --noconfirm --needed
 rm -rf /tmp/rofi-lbonn-wayland-git/
 
+# Install Rofimoji
+cd /tmp/
+git clone https://aur.archlinux.org/rofimoji.git 
+cd rofimoji
+makepkg -s --noconfirm --nocheck
+sudo pacman -U rofimoji-* --noconfirm --needed
+rm -rf /tmp/rofimoji
+
 # Install clipman
 cd /tmp/
 git clone https://aur.archlinux.org/clipman.git
