@@ -44,7 +44,6 @@ output * scale 1
 # Gaps & Borders
 gaps inner 2
 gaps outer 0
-hide_edge_borders --i3 smart
 
 # Set title font
 font pango:Hack 10
