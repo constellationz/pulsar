@@ -24,7 +24,7 @@ sudo pacman -S --noconfirm \
 	pavucontrol \
 	firefox \
 	zathura \
-	zathura-pdf-mupdf \
+	zathura-pdf-poppler \
 	ttf-hack \
 	gnu-free-fonts \
 	noto-fonts \
