@@ -55,6 +55,13 @@ seat seat0 xcursor_theme Simp1e-Gruvbox-Dark 24
 exec export XDG_CURRENT_DESKTOP=${XDG_CURRENT_DESKTOP:-sway}"
 exec export MOZ_ENABLE_WAYLAND=1
 
+# Start dropbox
+exec dropbox
+
+# Start gnome keyring daemon
+exec eval $(gnome-keyring-daemon --start)
+exec export SSH_AUTH_SOCK
+
 # Statusbar
 exec waybar
 
