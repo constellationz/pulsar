@@ -15,14 +15,6 @@ sudo pacman -U gruvbox-material-icon-theme-* --noconfirm --needed
 sudo pacman -U gruvbox-material-gtk-theme-* --noconfirm --needed
 rm -rf /tmp/gruvbox-material-theme-git/
 
-# Install Gruvbox cursor theme
-cd /tmp/
-git clone https://aur.archlinux.org/xcursor-simp1e.git
-cd xcursor-simp1e
-makepkg -s --noconfirm
-sudo pacman -U xcursor-simp1e-gruvbox-* --noconfirm --needed
-rm -rf /tmp/xcursor-simp1e/
-
 # Install Rofi for Wayland
 cd /tmp/
 git clone https://aur.archlinux.org/rofi-lbonn-wayland-git.git 
