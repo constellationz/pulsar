@@ -21,6 +21,7 @@ sudo pacman -S --noconfirm \
 	alacritty \
 	mpv \
 	imv \
+	dunst \
 	pavucontrol \
 	firefox \
 	zathura \

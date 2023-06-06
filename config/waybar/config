@@ -5,6 +5,7 @@
     "modules-left": ["sway/workspaces", "sway/window", "sway/mode"],
     "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "memory", "cpu", "battery", "network", "pulseaudio"],
+    "output": "DP-2",
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
