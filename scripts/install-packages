@@ -9,6 +9,7 @@ sudo pacman -S --noconfirm \
 	sway \
 	xdg-utils \
 	xdg-desktop-portal-wlr \
+	xdg-desktop-portal-gtk \
 	libnotify \
 	swayidle \
 	swaybg \
