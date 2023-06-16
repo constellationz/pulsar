@@ -3,8 +3,17 @@
 
 sudo pacman -S --noconfirm --needed flatpak git ostree appstream-glib
 
-cd /tmp/
-git clone https://github.com/refi64/stylepak.git
-cd stylepak
-./stylepak install-user $(gsettings get org.gnome.desktop.interface gtk-theme | sed "s/'//g")
-rm -rf /tmp/stylepak
+mkdir -p ~/.themes
+mkdir -p ~/.icons
+
+GTK_THEME=$(gsettings get org.gnome.desktop.interface gtk-theme | sed "s/'//g")
+ICON_THEME=$(gsettings get org.gnome.desktop.interface icon-theme | sed "s/'//g")
+
+cp /usr/share/themes/$GTK_THEME/ ~/.themes/$GTK_THEME/ -r
+cp /usr/share/icons/$ICON_THEME/ ~/.icons/$ICON_THEME/ -r
+
+sudo flatpak override --env=GTK_THEME=$GTK_THEME
+sudo flatpak override --env=ICON_THEME=$ICON_THEME
+sudo flatpak override --filesystem=~/.themes
+sudo flatpak override --filesystem=~/.icons
+
