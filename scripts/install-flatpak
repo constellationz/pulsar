@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+# Install flatpak
+
+sudo pacman -S --noconfirm --needed flatpak git ostree appstream-glib
+
+cd /tmp/
+git clone https://github.com/refi64/stylepak.git
+cd stylepak
+./stylepak install-user $(gsettings get org.gnome.desktop.interface gtk-theme | sed "s/'//g")
+rm -rf /tmp/stylepak
