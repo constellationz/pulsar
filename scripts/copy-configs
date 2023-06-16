@@ -3,10 +3,12 @@
 
 # Used to store certain states
 mkdir -p $HOME/.config
+mkdir -p $HOME/.local/bin
 
 # Copy configs to config directory
 SCRIPT_DIR=$(dirname $0)
 CONFIG_DIR=$SCRIPT_DIR/../config
+BIN_DIR=$SCRIPT_DIR/../bin
 
 # $1 - From directory
 # $2 - To directory
@@ -19,4 +21,9 @@ sync () {
 for config in $(ls -A $CONFIG_DIR); do
 	echo "Syncing config/$config"
 	sync $CONFIG_DIR/$config $HOME/.config/
+done
+
+for bin in $(ls -A $BIN_DIR); do
+	echo "Syncing bin/$bin"
+	sync $BIN_DIR/$bin $HOME/.local/bin
 done
