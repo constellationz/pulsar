@@ -1,7 +1,10 @@
 #!/usr/bin/bash
 # Remove .desktop entries for certain programs
 
-for app in lstopo rofi rofi-theme-selector
+for app in rofi rofi-theme-selector \
+	avahi-discover lstopo \
+	bvnc bssh \
+	qvidcap qv4l2
 do
 	sudo rm -rf /usr/share/applications/$app.desktop
 done

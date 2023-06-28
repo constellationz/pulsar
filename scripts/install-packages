@@ -23,6 +23,8 @@ sudo pacman -S --noconfirm \
 	mpv \
 	imv \
 	dunst \
+	nemo \
+	l3afpad \
 	pavucontrol \
 	firefox \
 	zathura \
